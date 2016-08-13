@@ -20,13 +20,37 @@ namespace CSExercises
         public static void Main(string[] args)
         {
             //YOUR CODE HERE
+            Console.WriteLine("pls enter a:  ");
+            string sideAstr = Console.ReadLine();
+            Console.WriteLine("pls enter b:  ");
+            string sideBstr = Console.ReadLine();
+            Console.WriteLine("pls enter c:  ");
+            string sideCstr = Console.ReadLine();
+
+            double SideA=Convert.ToDouble(sideAstr);
+            double SideB=Convert.ToDouble(sideBstr);
+            double SideC=Convert.ToDouble(sideCstr);
+            double num = (SideA + SideB + SideC) / 2;
+
+            if (num < SideA || num < SideB ||num < SideC)
+            {
+                string note = "can't be computed";
+                Console.WriteLine(note);
+            }
+            else
+            {
+                Console.WriteLine(CalculateArea(SideA,SideB,SideC));
+            }
+
 
         }
 
         public static double CalculateArea(double a, double b, double c)
         {
             //YOUR CODE HERE
-            return 0;
+            double s = (a + b + c) / 2;     
+                double area = Math.Sqrt(s * (s - a) * (s - b) * (s - c));
+                return area;          
         }
     }
 }

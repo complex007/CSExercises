@@ -12,10 +12,43 @@ namespace CSExercises
         {
             Console.Write("Please enter your name: ");
             string name = Console.ReadLine();
-            Console.Write("Please enter your gender (M/F): ");
-            string gender = Console.ReadLine();
+            string gender = "0";
+            do
+            {
+                Console.Write("Pls enter your gender (M/F) : ");
+                gender = Console.ReadLine();
+            }
+            while (gender != "M" && gender != "F");
+           
+            ////bool result = Convert.ToBoolean(gender);
+            ////result = true;
 
-            //YOUR CODE HERE
+            ////YOUR CODE HERE
+            string Gender ="0";
+            if (gender == "M")
+            { Gender = "Mr. "; }
+            else if (gender == "F")
+            { Gender = "Ms. "; }
+            
+            
+             //     Console.Write("Pls enter your gender (M/F) : ");
+             //     gender = Console.ReadLine();
+             //} 
+            
+
+            
+            Console.WriteLine("Good Morning {0} {1} .",Gender,name);            
         }
+        //public static void Getgender()
+        //{
+        //    Console.Write("Pls enter your gender (M/F) : ");
+        //    string genderstr = Console.ReadLine();
+        //  if(genderstr =="M"|| genderstr =="F")
+        //  {
+        //      gender=
+        //  }
+
+        //}
+        
     }
 }
