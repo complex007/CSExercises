@@ -32,7 +32,7 @@ namespace CSExercises
             double SideC=Convert.ToDouble(sideCstr);
             double num = (SideA + SideB + SideC) / 2;
 
-            if (num < SideA || num < SideB ||num < SideC)
+            if (num *(num-SideA)*(num-SideB)*(num- SideC)<0)
             {
                 string note = "can't be computed";
                 Console.WriteLine(note);

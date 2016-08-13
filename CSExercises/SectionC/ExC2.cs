@@ -16,12 +16,37 @@ namespace CSExercises
         {
             Console.Write("Please enter your name: ");
             string name = Console.ReadLine();
-            Console.Write("Please enter your gender (M/F): ");
-            string gender = Console.ReadLine();
+            string gender="0";
+            do
+            {
+                Console.Write("Please enter your gender (M/F): ");
+                gender = Console.ReadLine();
+            }
+            while (gender != "F" && gender != "M");
+
             Console.Write("Please enter your age: ");
-            int age = Convert.ToInt32(Console.ReadLine());
+            String input = Console.ReadLine();
+            int age = Convert.ToInt32(input);
 
             //YOUR CODE HERE
+            string Addgender = "0";
+
+            if (gender == "F")
+            { 
+                if(age>=40)
+                { Addgender = "Aunty"; }
+                else
+                { Addgender = "Ms. "; }
+            }
+            else if (gender == "M")
+            {
+                if (age >= 40)
+                { Addgender = "Uncle"; }
+                else
+                { Addgender = "Mr. "; }
+            }
+
+            Console.WriteLine("Good morning {0} {1} . ", Addgender,name);
         }
     }
 }
