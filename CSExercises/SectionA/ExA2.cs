@@ -15,10 +15,12 @@ namespace CSExercises
     public class ExA2
     {
         public static void Main(string[] args)
+
         {
+            Console.WriteLine("please enter your name: ");
             string name = Console.ReadLine();
             //YOUR CODE HERE
-
+            Console.WriteLine("Good Morning {0}",name);
         }
     }
 }
