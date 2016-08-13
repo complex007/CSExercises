@@ -24,8 +24,10 @@ namespace CSExercises
             double inputDbl = Convert.ToDouble(inputStr);
 
             //YOUR CODE HERE
+            Console.WriteLine( "{0:0.00}",(Math.Floor(inputDbl*100)/100 ));
 
         }
+
 
     }
 }

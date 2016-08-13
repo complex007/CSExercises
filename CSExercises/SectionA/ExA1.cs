@@ -20,8 +20,7 @@ namespace CSExercises
         public static void Main(string[] args)
         {
             //YOUR CODE HERE
-            Console.WriteLine("Iris\niris_yuqi.wang@outlook.com");
-
+            Console.WriteLine("Iris\niris_yuqi.wang@outlook.com");         
         }
     }
 }
