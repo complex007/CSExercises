@@ -18,13 +18,16 @@ namespace CSExercises
         public static void Main(string[] args)
         {
             //YOUR CODE HERE
-
+            Console.WriteLine("Please enter a three_digit integer:   ");
+            int num = Convert.ToInt32(Console.ReadLine());
+            IsArmstrongNumber(num);
         }
 
 
         public static bool IsArmstrongNumber(int n)
         {
             //YOUR CODE HERE
+
             return false;
 
         }

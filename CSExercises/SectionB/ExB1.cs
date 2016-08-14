@@ -25,7 +25,7 @@ namespace CSExercises
         public static double SQRT(double x)
         {
             //YOUR CODE HERE: return the square root of x
-            return Math.Round(Math.Sqrt(x),3);
+            return Math.Sqrt(x);
 
         }
     }
