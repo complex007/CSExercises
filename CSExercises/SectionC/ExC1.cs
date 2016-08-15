@@ -12,7 +12,7 @@ namespace CSExercises
         {
             Console.Write("Please enter your name: ");
             string name = Console.ReadLine();
-            string gender = "0";
+            string gender = "";
             do
             {
                 Console.Write("Pls enter your gender (M/F) : ");
@@ -24,7 +24,7 @@ namespace CSExercises
             ////result = true;
 
             ////YOUR CODE HERE
-            string Gender ="0";
+            string Gender ="";
             if (gender == "M")
             { Gender = "Mr. "; }
             else if (gender == "F")

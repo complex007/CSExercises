@@ -20,15 +20,46 @@ namespace CSExercises
             //YOUR CODE HERE
             Console.WriteLine("Please enter a three_digit integer:   ");
             int num = Convert.ToInt32(Console.ReadLine());
-            IsArmstrongNumber(num);
+            if (IsArmstrongNumber(num))
+            {
+                Console.WriteLine("Armstrong Number");
+            }
+            else
+            {
+                Console.WriteLine("Not Armstrong Number");
+            }
+            
+
         }
 
 
         public static bool IsArmstrongNumber(int n)
         {
             //YOUR CODE HERE
+            double number= Convert.ToDouble(n);
+            double num1 =Math.Floor(number / 100);
+            double num2 = Math.Floor((number - num1 * 100) / 10);
+            double num3 =number - num1 * 100-num2*10;
+            bool judgeresult;
 
-            return false;
+            if (number==Math.Pow(num1,3)+Math.Pow(num2,3)+Math.Pow(num3,3))
+            { judgeresult = true;
+            
+            }
+            else
+            { judgeresult = false;
+           
+            }
+
+            //Console.WriteLine(num1);
+
+            //Console.WriteLine(num2);
+
+            //Console.WriteLine(num3);
+
+            //Console.WriteLine(Math.Pow(num1, 3) + Math.Pow(num2, 3) + Math.Pow(num3, 3));
+
+            return judgeresult;
 
         }
     }

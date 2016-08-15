@@ -30,7 +30,7 @@ namespace CSExercises
         public static string CalculateGrade(int mark)
         {
             //YOUR CODE HERE
-            string grade = "0";
+            string grade = "";
             
             if (mark>=0&&mark<40)
             { grade = "F"; }

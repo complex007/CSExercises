@@ -16,7 +16,7 @@ namespace CSExercises
         {
             Console.Write("Please enter your name: ");
             string name = Console.ReadLine();
-            string gender="0";
+            string gender="";
             do
             {
                 Console.Write("Please enter your gender (M/F): ");
@@ -29,7 +29,7 @@ namespace CSExercises
             int age = Convert.ToInt32(input);
 
             //YOUR CODE HERE
-            string Addgender = "0";
+            string Addgender = "";
 
             if (gender == "F")
             { 

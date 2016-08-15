@@ -20,11 +20,15 @@ namespace CSExercises
             string input = Console.ReadLine();
 
             Console.WriteLine( CalculateFare(Convert.ToDouble(input)));
+            //int a = 5;
+            //Console.WriteLine(a++);
+            //Console.WriteLine(a++);
         }
 
         public static double CalculateFare(double distance)
         {
             //YOUR CODE HERE
+          
             double fare = 2.40 + distance * 0.4;
 
             return (Math.Ceiling(fare*10))/10;
