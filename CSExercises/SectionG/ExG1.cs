@@ -17,6 +17,7 @@ namespace CSExercises
 
         public static void Main(string[] args)
         {
+
             Console.Write("Please enter a phrase: ");
             string phrase = Console.ReadLine();
 
@@ -32,7 +33,23 @@ namespace CSExercises
         public static int CountVowels(string phrase)
         {
             //YOUR CODE HERE
-            return 0;
+            int sum = 0;
+            for (int i = 0; i < phrase.Length; i++ )
+            {
+                int l = vowels.Length;
+                for( int j=0; j<vowels.Length;j++)
+                {
+                    string input=phrase.Substring(i,1);
+                    string compare = Convert.ToString(vowels[j]);
+
+                    if(input.Equals(compare))
+                    {
+                        sum = sum + 1;
+                    }
+                }
+
+            }
+                return sum;
 
 
         }
@@ -41,7 +58,11 @@ namespace CSExercises
         {
             int[] vowelCount = new int[5];
             //YOUR CODE HERE
-
+            for(int i=0; i<vowels.Length;i++)
+            {
+                for (int j=0;)
+                vowelCount[i]=
+            }
 
 
             return vowelCount;

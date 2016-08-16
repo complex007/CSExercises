@@ -35,41 +35,92 @@ namespace CSExercises
 
             CalculateMinMaxAvg(sales, ref min, ref max, ref avg);
 
-            Console.WriteLine("Maximum Sales: " + max);
+
+
+            Console.WriteLine("Maximum Sales: {0}" , max);
             Console.WriteLine("Minimum Sales: " + min);
             Console.WriteLine("Average Sales: " + avg);
+
+            //Console.WriteLine("Maximum Sales: " + CalculateMaxMonth(sales));
+            //Console.WriteLine("Minimum Sales: " + CalculateMinMonth(sales));
+            //Console.WriteLine("Average Sales: " + CalculateAvgSales(sales));
         }
 
         public static void CalculateMinMaxAvg(int[] sales, ref int minMonth, ref int maxMonth, ref double avg)
         {
             //YOUR CODE HERE
             //Assign the result to minMonth, maxMonth and avg variable/parameter accordingly
-
-
+            double sum = 0;
+            for(int n=0;n<11;n++)
+            {
+               
+                if (sales[n]<sales[n+1])
+                {
+                    maxMonth = n+1;
+                   
+                }
+                else if (sales[n] >sales[n + 1])
+                {
+                   minMonth = n+1; 
+                }
+                
+                sum = sum + sales[n]+sales[11];
+                
+            }
+            avg = sum / 12;
         }
 
-        public static int CalculateMinMonth(int[] sales)
-        {
-            //YOUR CODE HERE
-            return 0;
+        //public static int CalculateMinMonth(int[] sales)
+        //{
+        //    //YOUR CODE HERE
+        //    int monthmin=0;
+            
+        //    for (int n = 0; n < 10;n++ )
+        //    {
+        //        if(sales[n]<sales[n+1])
+        //        {
+        //           monthmin= n;
+                   
+        //        }
+               
+        //    }
+        //        return monthmin;
 
-        }
+        //}
 
-        public static int CalculateMaxMonth(int[] sales)
-        {
-            //YOUR CODE HERE
-            return 0;
+        //public static int CalculateMaxMonth(int[] sales)
+        //{
+        //    //YOUR CODE HERE
+        //    int monthmax = 0;
+            
+        //    for (int n = 0; n < 10; n++)
+        //    {
+        //        if (sales[n] > sales[n + 1])
+        //        {
+        //            monthmax = n;
+                    
+        //        }
+
+        //    }
+        //    return monthmax;
 
 
 
-        }
+        //}
 
-        public static double CalculateAvgSales(int[] sales)
-        {
-            //YOUR CODE HERE
-            return 0;
+        //public static double CalculateAvgSales(int[] sales)
+        //{
+        //    //YOUR CODE HERE
+        //    int sumsales = 0;
 
-        }
+        //    for (int n = 0; n <11; n++)
+        //    {
+        //        sumsales = sumsales + sales[n];
+
+        //    }
+        //    return sumsales/12;
+
+        //}
 
 
     }
