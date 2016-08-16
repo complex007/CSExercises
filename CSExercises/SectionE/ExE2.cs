@@ -23,6 +23,14 @@ namespace CSExercises
         public static void Main(string[] args)
         {
             //YOUR CODE HERE
+            for (double n=1.0 ; n<=10.0; n++)
+
+            {
+                double inverse = 1/n;
+                double sr = Math.Sqrt(n);
+                double s= Math.Pow(n,2);
+                Console.WriteLine("NO: {0:0.0} INVERSE: {1:0.0##} SQUARE ROOT: {2:0.0##}  SQUARE: {3:0.0} ",n,inverse,sr,s);
+            }
         }
     }
 }

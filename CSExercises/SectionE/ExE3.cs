@@ -34,7 +34,27 @@ namespace CSExercises
         public static bool IsPrime(int n)
         {
             //YOUR CODE HERE
-            return false;
+            bool judge= true;
+
+            for (int start = 1; start <= n;start++ )
+            {
+                
+                    double result = n % start;
+
+                if (result == 0)
+                { 
+                    if (start==1 || start==n)
+                    { 
+                        judge = true; 
+                    }
+                    else
+                    {
+                        judge= false;
+                        break;
+                    }
+                }
+            }
+                return judge;
 
 
         }

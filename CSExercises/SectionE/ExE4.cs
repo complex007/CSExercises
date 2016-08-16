@@ -31,7 +31,26 @@ namespace CSExercises
         public static bool IsPerfectNumber(int n)
         {
             //YOUR CODE HERE
-            return false;
+            bool judge = true;
+            int sumfactor=0;
+
+            for (int start = 1; start < n;start++ )
+            {
+                if(n%start==0)
+                {
+                   sumfactor = sumfactor + start;
+                }
+            }
+
+            if (sumfactor == n)
+            {
+                judge = true;
+            }
+            else
+            {
+                judge = false;
+            }
+                return judge;
 
 
         }
