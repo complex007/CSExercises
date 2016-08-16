@@ -20,12 +20,45 @@ namespace CSExercises
         public static void Main(string[] args)
         {
             //YOUR CODE HERE
+            string[] name = new string[5] { "John","Venkat","Mary","Victor","Betty"};
+           int  [] mark = new int [5] { 63, 29, 75, 82, 55 };
+            
+           reportname(name) ;
+           reportmark(mark);
 
+        }
+        public static void reportname(string[] name)
+        {
+            for(int i=0;i<name.Length;i++)
+            {
+                for (int j = i+1; j < name.Length ; j++ )
+                    if (name[i].Substring(0, 1).CompareTo(name[j].Substring(0, 1)) == 1)
+                    {
+                        string c = name[j];
+                        name[j] = name[i];
+                        name[i] = c;
+                        
+                        
+                    }
 
-
-
-
-
+                Console.WriteLine(name[i]); 
+            }
+            
+        }
+        public static void reportmark(int[] mark)
+        {
+            for(int i=0;i<mark.Length;i++)
+            {
+                for (int j = i+1; j<mark.Length; j++)
+                if(mark[i]<mark[j])
+                {
+                    int c = mark[i];
+                    mark[i] = mark[j];
+                    mark[j] = c;
+                }
+                Console.WriteLine(mark[i]); 
+            }
+            
         }
     }
 }

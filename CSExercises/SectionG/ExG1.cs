@@ -19,7 +19,7 @@ namespace CSExercises
         {
 
             Console.Write("Please enter a phrase: ");
-            string phrase = Console.ReadLine();
+            string phrase = (Console.ReadLine()).ToLower();
 
             Console.WriteLine("Total number of vowels: " + CountVowels(phrase));
 
@@ -36,7 +36,7 @@ namespace CSExercises
             int sum = 0;
             for (int i = 0; i < phrase.Length; i++ )
             {
-                int l = vowels.Length;
+                
                 for( int j=0; j<vowels.Length;j++)
                 {
                     string input=phrase.Substring(i,1);
@@ -56,16 +56,41 @@ namespace CSExercises
 
         public static int[] CountIndividualVowels(string phrase)
         {
-            int[] vowelCount = new int[5];
+            int[] vowelCount = new int[5] { 0, 0, 0, 0, 0 };
             //YOUR CODE HERE
-            for(int i=0; i<vowels.Length;i++)
+            for (int i = 0; i < vowels.Length; i++)
             {
-                for (int j=0;)
-                vowelCount[i]=
+                for (int j = 0; j < phrase.Length; j++)
+                {
+
+
+                    string input = phrase.Substring(j, 1);
+                    string compare = Convert.ToString(vowels[i]);
+
+                    if (input.Equals(compare))
+                    {
+                        vowelCount[i] = vowelCount[i] + 1;
+
+
+                    }
+                }
+
             }
-
-
             return vowelCount;
+        }
+            public static void judge(string phrase)
+            {
+                         for (int i = 0; i < phrase.Length; i++ )
+                    {
+                
+                        for( int j=0; j<vowels.Length;j++)
+                        {
+                            string input=phrase.Substring(i,1);
+                            string compare = Convert.ToString(vowels[j]);
+                        }
+                    }
+
+            
         }
     }
 }

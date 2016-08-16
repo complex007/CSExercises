@@ -32,7 +32,25 @@ namespace CSExercises
         public static bool IsPalindrome(string phrase)
         {
             //YOUR CODE HERE
-            return false;
+            phrase = ((phrase).ToLower()).Trim();
+            bool judge = true;
+            int range=phrase.Length;
+            int n=Convert.ToInt32(range/2);
+
+            for (int i = 0; i <n; i++ )
+            {
+                string compare1=phrase.Substring(i,1);
+                string compare2=phrase.Substring( range-1-i,1);
+                if(compare1.Equals(compare2))
+                {
+                    judge=true;
+                }
+                else
+                {
+                    judge=false;
+                }
+            }
+                return judge;
 
 
 
