@@ -22,16 +22,20 @@ namespace CSExercises
     {
         public static void Main(string[] args)
         {
-            //Console.Write("Enter the amount: ");
-            //double amount = Convert.ToDouble(Console.ReadLine());
-
+            Console.Write("Enter the amount: ");
+            double amount = Convert.ToDouble(Console.ReadLine());
+            
             //YOUR CODE HERE
-            //test H3
-            string s = "bao hod";
-            char c1 = 'o';
-            char c2 = 'f';
-            Console.WriteLine(ExH4.Substitute(s,c1,c2));
-        
+            double num100 = Math.Floor(amount);   //100
+            double num50 = Math.Floor((amount * 100 - num100 * 100) / 50.0); //50
+            double num20 = Math.Floor((amount * 100 - num100 * 100 - num50 * 50) / 20.0);//20
+            double num10 = Math.Floor((amount * 100 - num100 * 100 - num50 * 50-num20*20) / 10.0);//10
+            double num5 = Math.Floor((amount * 100 - num100 * 100 - num50 * 50 - num20 * 20-num10*10) / 5.0);//5
+            Console.WriteLine(num100);
+            Console.WriteLine(num50);
+            Console.WriteLine(num20);
+            Console.WriteLine(num10);
+            Console.WriteLine(num5);
 
         }
     }
