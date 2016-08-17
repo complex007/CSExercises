@@ -22,11 +22,16 @@ namespace CSExercises
     {
         public static void Main(string[] args)
         {
-            Console.Write("Enter the amount: ");
-            double amount = Convert.ToDouble(Console.ReadLine());
+            //Console.Write("Enter the amount: ");
+            //double amount = Convert.ToDouble(Console.ReadLine());
 
             //YOUR CODE HERE
-
+            //test H3
+            string s = "bao hod";
+            char c1 = 'o';
+            char c2 = 'f';
+            Console.WriteLine(ExH4.Substitute(s,c1,c2));
+        
 
         }
     }

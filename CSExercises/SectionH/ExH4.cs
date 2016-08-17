@@ -1,4 +1,5 @@
-﻿namespace CSExercises
+﻿using System;
+namespace CSExercises
 {
     //Write a static method:  Substitute(string s, char c1, char c2) that would 
     //return a string. The method should find all occurrences of the character c1 
@@ -9,7 +10,26 @@
         public static string Substitute(string s, char c1, char c2)
         {
             //YOUR CODE HERE
-            return null;
-        }
+            string result = "";
+
+            for (int i = 0; i < s.Length; i++)
+            {
+
+
+                if (s.Substring(i, 1).Equals(Convert.ToString(c1)))
+                {
+                    result = result + Convert.ToString(c2);
+                }
+                else
+                {
+                    result = result + s.Substring(i, 1);
+                }
+            }
+
+            return result;
+
+        } 
+        
     }
-}
+ }
+
