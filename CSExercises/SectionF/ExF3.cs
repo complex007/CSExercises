@@ -64,9 +64,18 @@ namespace CSExercises
         {
 
             int[] total = new int[12];
+            
 
             //YOUR CODE HERE
-            return total;
+            
+            for (int i = 0; i < total.Length;i++ )
+            {
+                for ( int j=0;j<marks.Length/total.Length;j++)
+                {
+                    total[i] = total[i] + marks[i, j];
+                }
+            }
+                return total;
 
 
         }
@@ -76,7 +85,12 @@ namespace CSExercises
             double[] avg = new double[12];
 
             //YOUR CODE HERE
-            return avg;
+            
+            for (int i = 0; i <  avg.Length;i++ )
+            {
+                avg[i] = CalculateTotalMarks(marks)[i]/(marks.Length / avg.Length);
+            }
+                return avg;
 
 
 
@@ -85,8 +99,17 @@ namespace CSExercises
         public static double[] CalculateSubjectAverage(int[,] marks)
         {
             double[] avgPerSubject = new double[4];
-
+            int[] totalpersubject = new int[avgPerSubject.Length];
             //YOUR CODE HERE
+            for (int i = 0; i < avgPerSubject.Length; i++)
+            {
+               for(int j=0;j<marks.Length/avgPerSubject.Length;j++)
+               {
+                   totalpersubject[i] = totalpersubject[i] + marks[j, i];
+               }
+               avgPerSubject[i] = totalpersubject[i] / (marks.Length / avgPerSubject.Length);
+            }
+
             return avgPerSubject;
 
 

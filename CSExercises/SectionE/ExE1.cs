@@ -22,7 +22,7 @@ namespace CSExercises
             int n = Convert.ToInt32(Console.ReadLine());
 
             int fact1 = CalculateFactorialInc(n);
-            Console.WriteLine(fact1);
+            Console.WriteLine(fact1);                       
 
             int fact2 = CalculateFactorialDec(n);
             Console.WriteLine(fact2);
