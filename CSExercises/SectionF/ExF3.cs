@@ -26,7 +26,8 @@ namespace CSExercises
     {
         public static void Main(string[] args)
         {
-            int [,] marks = new int[,]
+
+            int[,] marks = new int[,]
             {
                 {56,84,68,29},
                 {94,73,31,96},
@@ -45,12 +46,13 @@ namespace CSExercises
             int[] total = CalculateTotalMarks(marks);
             double[] avg = CalculateStudentAverage(marks);
             double[] avgPerSubject = CalculateSubjectAverage(marks);
-
+            double[] variance = CalculateVariance(marks);
 
             for (int row = 0; row < 12; row++)
             {
                 Console.WriteLine("Total marks for student {0}: {1}",row,total[row]);
                 Console.WriteLine("Avg marks for student {0}: {1}", row, avg[row]);
+                Console.WriteLine("variance for student {0}: {1}", row, variance[row]);
             }
 
             for (int col = 0; col < 4; col++)
@@ -70,7 +72,7 @@ namespace CSExercises
             
             for (int i = 0; i < total.Length;i++ )
             {
-                for ( int j=0;j<marks.Length/total.Length;j++)
+                for ( int j=0;j<marks.GetLength(1);j++)
                 {
                     total[i] = total[i] + marks[i, j];
                 }
@@ -88,7 +90,7 @@ namespace CSExercises
             
             for (int i = 0; i <  avg.Length;i++ )
             {
-                avg[i] = CalculateTotalMarks(marks)[i]/(marks.Length / avg.Length);
+                avg[i] = CalculateTotalMarks(marks)[i]/marks.GetLength(1);
             }
                 return avg;
 
@@ -103,11 +105,11 @@ namespace CSExercises
             //YOUR CODE HERE
             for (int i = 0; i < avgPerSubject.Length; i++)
             {
-               for(int j=0;j<marks.Length/avgPerSubject.Length;j++)
+                for (int j = 0; j < marks.GetLength(0); j++)
                {
                    totalpersubject[i] = totalpersubject[i] + marks[j, i];
                }
-               avgPerSubject[i] = totalpersubject[i] / (marks.Length / avgPerSubject.Length);
+               avgPerSubject[i] = totalpersubject[i] / marks.GetLength(0);
             }
 
             return avgPerSubject;
@@ -122,7 +124,16 @@ namespace CSExercises
         {
             double[] variance = new double[12];
             //YOUR CODE HERE - bonus questions
-            return variance;
+            for (int i = 0; i < marks.GetLength(0);i++ )
+            {
+                for (int j = 0; j < marks.GetLength(1); j++)
+                { 
+                    double[] avg = CalculateStudentAverage(marks);
+                    variance[i] = variance[i] + Math.Pow((marks[i, j] - avg[i]), 2) / marks.GetLength(1);
+                }
+                    
+            }
+                return variance;
         }
     }
 }
