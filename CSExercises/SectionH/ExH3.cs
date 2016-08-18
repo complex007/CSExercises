@@ -13,7 +13,7 @@ namespace CSExercises
             int input=i;
             
             string result = "";
-            int a, b, c ;
+            int a;
             string sum = "";
                
             if (input <= 9)

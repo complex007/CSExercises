@@ -31,11 +31,11 @@ namespace CSExercises
             double num20 = Math.Floor((amount * 100 - num100 * 100 - num50 * 50) / 20.0);//20
             double num10 = Math.Floor((amount * 100 - num100 * 100 - num50 * 50-num20*20) / 10.0);//10
             double num5 = Math.Floor((amount * 100 - num100 * 100 - num50 * 50 - num20 * 20-num10*10) / 5.0);//5
-            Console.WriteLine(num100);
-            Console.WriteLine(num50);
-            Console.WriteLine(num20);
-            Console.WriteLine(num10);
-            Console.WriteLine(num5);
+            Console.WriteLine("{0}   100c",num100);
+            Console.WriteLine("{0}   50c", num50);
+            Console.WriteLine("{0}   20c", num20);
+            Console.WriteLine("{0}   10c", num10);
+            Console.WriteLine("{0}    5c", num5);
 
         }
     }

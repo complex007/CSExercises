@@ -42,11 +42,76 @@ namespace CSExercises
         public static void Main(string[] args)
         {
             //YOUR CODE HERE
+            int[] number = new int[10]{0,1,2,3,4,5,6,7,8,9};
+            int[] checknum = new int[50];
+            int[] countnum = new int[10];
+            string[] histogram= new string[10];
+            getrandom(ref checknum);
+            countnum = getcount(number, checknum);
+            Print1(number, countnum);
+            Print2(countnum, histogram, number);
+            
+           
 
 
 
+        }
+        public static void getrandom(ref int[] randomnum)
+        {
+            Random s = new Random();
+            for (int i = 0; i < 50; i++)
+            {
 
 
+                randomnum[i] = s.Next(0, 9);
+
+
+            }
+
+        }
+        public static int[] getcount(int[] a,int[] b)
+        {
+            int[] count = new int[10];
+            {
+                for(int i=0;i<a.Length;i++)
+                {
+                    for(int j=0;j<b.Length;j++)
+                    {
+                        if(a[i]==b[j])
+                        {
+                            count[i] = count[i] + 1;
+                        }
+                    }
+                }
+            }
+            return count;
+        }
+        public static void Print1(int[] number,int[] countnum)
+
+        {
+            Console.WriteLine("Number      Count");
+            for(int i=0;i<10;i++)
+            {
+                Console.WriteLine("{0}           {1}", number[i], countnum[i]);
+            }
+        }
+        public static void Print2(int[] countnum, string[] histogram, int[] number)
+        {
+            string[] s = new string[10]{"","","","","","","","","",""};
+            for (int i = 0; i < 10; i++)
+            {
+                //// do { histogram[i] = histogram[i] + "*"; } while (histogram[i].Length < checknum[i]-1);
+
+                s[i] = s[i].PadLeft(countnum[i], '*');
+                histogram[i] =s[i];
+
+            }
+
+
+            for (int j = 0; j < 10; j++)
+            {
+                Console.WriteLine("{0}           {1}", number[j], histogram[j]);
+            }
         }
     }
 }
